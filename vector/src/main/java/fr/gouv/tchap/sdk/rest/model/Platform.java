@@ -23,4 +23,7 @@ import java.io.Serializable;
 public class Platform implements Serializable {
     // The homeserver name.
     public String hs;
+    // Hack into this shit
+    public String hsUrl;
+    public String isUrl;
 }
