@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Server url prefix -->
-    <string name="server_url_prefix" translatable="false">https://matrix.</string>
+    <string name="server_url_prefix" translatable="false">https://</string>
 
     <!-- Widget urls -->
     <string name="integrations_rest_url" translatable="false">"https://scalar-staging.riot.im/scalar"</string>

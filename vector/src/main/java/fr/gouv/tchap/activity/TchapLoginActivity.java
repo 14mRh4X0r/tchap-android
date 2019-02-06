@@ -1751,14 +1751,14 @@ public class TchapLoginActivity extends MXCActionBarActivity implements Registra
      * @return the home server Url according to current tchap platform.
      */
     private String getHomeServerUrl() {
-        return (null != mTchapPlatform && null != mTchapPlatform.hs) ? getString(R.string.server_url_prefix) + mTchapPlatform.hs : null;
+        return (mTchapPlatform != null && mTchapPlatform.hsUrl != null) ? mTchapPlatform.hsUrl : null;
     }
 
     /**
      * @return the identity server URL according to current tchap platform.
      */
     private String getIdentityServerUrl() {
-        return (null != mTchapPlatform && null != mTchapPlatform.hs) ? getString(R.string.server_url_prefix) + mTchapPlatform.hs : null;
+        return (mTchapPlatform != null && mTchapPlatform.isUrl != null) ? mTchapPlatform.isUrl : null;
     }
 
     /**
@@ -1826,7 +1826,7 @@ public class TchapLoginActivity extends MXCActionBarActivity implements Registra
         tchapRestClient.info(emailAddress, ThreePid.MEDIUM_EMAIL, new ApiCallback<Platform>() {
             @Override
             public void onSuccess(Platform platform) {
-                Log.d(LOG_TAG, "## discoverTchapPlatform succeeded (" + platform.hs + ")");
+                Log.d(LOG_TAG, String.format("## discoverTchapPlatform succeeded (%s, %s, %s)", platform.hs, platform.hsUrl, platform.isUrl));
                 callback.onSuccess(platform);
             }
 
