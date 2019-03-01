@@ -660,7 +660,7 @@ public class Matrix {
                 .build();
 
         // Turn on the anti-virus server
-        session.getContentManager().configureAntiVirusScanner(true);
+        //session.getContentManager().configureAntiVirusScanner(true);
 
         dataHandler.setMetricsListener(metricsListener);
         dataHandler.setRequestNetworkErrorListener(new MXDataHandler.RequestNetworkErrorListener() {
